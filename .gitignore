@@ -1,0 +1,30 @@
+# .gitignore
+
+# ------------------------------------
+# 1. Environment & Dependencies
+# ------------------------------------
+# Python virtual environment folder
+venv/
+.env
+
+# Byte-code files
+__pycache__/
+*.pyc
+
+
+
+
+a.txt
+
+# ------------------------------------
+# 3. Operating System & Editor Files
+# ------------------------------------
+# macOS
+.DS_Store
+
+# Windows thumbnail database
+Thumbs.db
+
+# VS Code
+.vscode/
+

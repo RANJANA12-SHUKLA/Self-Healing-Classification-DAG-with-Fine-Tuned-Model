@@ -1,0 +1,28 @@
+2025-10-17 13:36:34,507 | INFO | [DAG Initialization] Self-Healing Classification DAG compiled successfully.
+2025-10-17 13:36:44,214 | INFO | [CLI Input] New request from user (Run 1): '"The movie was painfully slow and boring."'
+2025-10-17 13:36:44,214 | INFO | [InferenceNode] Running inference for text: '"The movie was painfully slow and boring."...'
+2025-10-17 13:36:48,186 | INFO | [InferenceNode] Predicted label: Negative | Confidence: 98.0%
+2025-10-17 13:36:48,202 | INFO | [ConfidenceCheckNode] Confidence 0.98 >= Threshold 0.88. Accepting prediction.
+2025-10-17 13:36:48,202 | INFO | [Final Decision] Final Label: Negative (Confidence: 98.0%)
+
+2025-10-17 13:37:03,183 | INFO | [CLI Input] New request from user (Run 2): '"I loved every moment, the acting was superb."'
+2025-10-17 13:37:03,183 | INFO | [InferenceNode] Running inference for text: '"I loved every moment, the acting was superb."...'
+2025-10-17 13:37:03,386 | INFO | [InferenceNode] Predicted label: Positive | Confidence: 98.0%
+2025-10-17 13:37:03,386 | INFO | [ConfidenceCheckNode] Confidence 0.98 >= Threshold 0.88. Accepting prediction.
+2025-10-17 13:37:03,386 | INFO | [Final Decision] Final Label: Positive (Confidence: 98.0%)
+
+2025-10-17 13:37:15,400 | INFO | [CLI Input] New request from user (Run 3): '"The movie had nice visuals but dragged on forever."'
+2025-10-17 13:37:15,400 | INFO | [InferenceNode] Running inference for text: '"The movie had nice visuals but dragged on forever...'
+2025-10-17 13:37:15,584 | INFO | [InferenceNode] Predicted label: Negative | Confidence: 93.7%
+2025-10-17 13:37:15,584 | INFO | [ConfidenceCheckNode] Confidence 0.94 >= Threshold 0.88. Accepting prediction.
+2025-10-17 13:37:15,584 | INFO | [Final Decision] Final Label: Negative (Confidence: 93.7%)
+
+2025-10-17 13:40:34,387 | INFO | [CLI Input] New request from user (Run 4): '"It was okay, not too good or bad."'
+2025-10-17 13:40:34,387 | INFO | [InferenceNode] Running inference for text: '"It was okay, not too good or bad."...'
+2025-10-17 13:40:34,586 | INFO | [InferenceNode] Predicted label: Positive | Confidence: 82.1%
+2025-10-17 13:40:34,586 | INFO | [ConfidenceCheckNode] Confidence 0.82 < Threshold 0.88. Triggering fallback...
+2025-10-17 13:40:34,586 | INFO | [FallbackNode] Preparing for user clarification. Initial prediction was 'Positive'.
+2025-10-17 13:40:34,586 | INFO | [CLI Interaction] FALLBACK MODE: Initiating Human-in-the-Loop.
+2025-10-17 13:40:51,176 | INFO | [CLI Interaction] User clarification received: 'consider it as a negative review'
+2025-10-17 13:40:51,177 | INFO | [Final Decision] Final Label: Negative (Corrected via user clarification)
+2025-10-17 15:41:03,227 | INFO | [DAG Initialization] Self-Healing Classification DAG compiled successfully.

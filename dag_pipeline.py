@@ -102,8 +102,9 @@ def run_inference(state: GraphState) -> GraphState:
         "step_history": [INFERENCE_NODE],
     }
 
-
+#-----------------------------------------------------------------------------
 # B. Confidence Check Node
+#-----------------------------------------------------------------------------
 def check_confidence(state: GraphState) -> GraphState:
     """Evaluates confidence and adds decision to state for routing."""
     
@@ -123,8 +124,9 @@ def check_confidence(state: GraphState) -> GraphState:
         "step_history": [CONFIDENCE_CHECK_NODE],
     }
 
-
+#----------------------------------------------------------------------------
 # C. Fallback Node
+#----------------------------------------------------------------------------
 def trigger_fallback(state: GraphState) -> GraphState:
     """
     Avoids incorrect classification by preparing the state for user clarification.

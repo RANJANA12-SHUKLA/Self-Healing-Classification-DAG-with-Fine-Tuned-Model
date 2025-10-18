@@ -104,13 +104,16 @@ python cli_app.py
 Threshold for Fallback: 70%
 Enter 'quit' or 'exit' to stop the application.
 
-[1] Enter text for classification:
-> The movie was painfully slow and boring.
-[InferenceNode] Predicted label: Negative | Confidence: 68.4%
-[ConfidenceCheckNode] Confidence too low. Triggering fallback...
-[FallbackNode] Could you clarify your intent? Was this a negative review?
-User: Yes, it was definitely negative.
-Final Label: Negative (Corrected via user clarification)
+10-17 13:40:34,387 | INFO | [CLI Input] New request from user (Run 4): '"It was okay, not too good or bad."'
+2025-10-17 13:40:34,387 | INFO | [InferenceNode] Running inference for text: '"It was okay, not too good or bad."...'
+2025-10-17 13:40:34,586 | INFO | [InferenceNode] Predicted label: Positive | Confidence: 82.1%
+2025-10-17 13:40:34,586 | INFO | [ConfidenceCheckNode] Confidence 0.82 < Threshold 0.88. Triggering fallback...
+2025-10-17 13:40:34,586 | INFO | [FallbackNode] Preparing for user clarification. Initial prediction was 'Positive'.
+2025-10-17 13:40:34,586 | INFO | [CLI Interaction] FALLBACK MODE: Initiating Human-in-the-Loop.
+2025-10-17 13:40:51,176 | INFO | [CLI Interaction] User clarification received: 'consider it as a negative review'
+2025-10-17 13:40:51,177 | INFO | [Final Decision] Final Label: Negative (Corrected via user clarification)
+2025-10-17 15:41:03,227 | INFO | [DAG Initialization] Self-Healing Classification DAG compiled successfully.
+2025-10-17 22:31:48,080 | INFO | [DAG Initialization] Self-Healing Classification DAG compiled successfully.
 ```
 
 ---
@@ -186,7 +189,7 @@ All important events are logged with timestamps in `logs/run_log.txt`.
 ##  Demo Video
 
  **Video Link:**
- [Watch Demo ](https://drive.google.com/file/d/YOUR_DEMO_VIDEO_LINK_HERE/view?usp=sharing)
+ [Watch Demo ](https://www.loom.com/share/6d8f2fe1e9014da8889cff494301ed6c?sid=0001d38c-b579-4f0a-9bda-f7abbe8f29a9)
 
 
 
